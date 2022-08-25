@@ -13,7 +13,7 @@ function Hero(){
         filterData();
     },[location,prices,type,date]);
     let filterData = () => {
-        let data = [];
+        let data = rowData;
         if(location){
             data = rowData.filter((ele,i) => {
                 return ele.state === location.toUpperCase();
@@ -86,7 +86,6 @@ function Hero(){
         }
         setData(data);
     }
-    console.log(data);
     return(
         <section className="container w-10/12 mx-auto">
             <div className="my-10">
